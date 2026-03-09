@@ -22,5 +22,4 @@ jobs:
           echo "  MOSTRANDO ESTRUTURA DE DIRETORIOS E ARQUIVOS"
           ls -l .github/workflows
           echo ""
-          echo "Total de workflows: ${ls -l .github/workflows | wc -l}"
-          
+          echo "Total de workflows: $(ls -l .github/workflows | wc -l)"
