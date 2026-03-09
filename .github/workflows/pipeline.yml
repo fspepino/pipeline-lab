@@ -1,0 +1,26 @@
+name: 'Estrutura de diretórios e arquivos'
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  demonstrando-estrurura:
+    name: 'Demonstrar estrutura básica'
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Mostrar estrutura .github@workflows
+        run: |
+          echo "  MOSTRANDO ESTRUTURA DE DIRETORIOS E ARQUIVOS"
+          ls -l .github/workflows
+          echo ""
+          echo "Total de workflows: ${ls -l .github/workflows | wc -l}"
+          
